@@ -1,5 +1,6 @@
 import 'package:first_flutter/main.dart';
 import 'package:flutter/material.dart';
+import 'package:first_flutter/pages/build_page_body.dart';
 class main_Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,12 +12,15 @@ class main_Page extends StatelessWidget {
   void setState(Null Function() param0) {}
   Widget _buildBody(){
     return Container(
+      alignment:Alignment.center,
+        color: Colors.black,
+        child: buil_page_body(),
     );
   }
   int _currentIndex = 0;
   Widget _buildButtonNavigation(){
       return BottomNavigationBar(
-          showSelectedLabels: false,
+          showSelectedLabels: true,
           showUnselectedLabels: false,
           selectedItemColor: Colors.pink,
           unselectedItemColor: Colors.purple[100],
