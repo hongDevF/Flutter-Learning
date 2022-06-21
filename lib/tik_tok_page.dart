@@ -55,7 +55,6 @@ class MyChildrenPage extends StatelessWidget {
       ),
     );
   }
-
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: Colors.black,

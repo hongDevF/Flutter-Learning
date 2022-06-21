@@ -1,5 +1,4 @@
 import '../models/movie_model.dart';
-
 List<MovieModel> movielist = [
   MovieModel(title: "hadi Patavi",image: "https://code.org/images/fit-320/avatars/hadi_partovi.jpg"),
   MovieModel(title: "Anders hejlsberg",image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Anders_Hejlsberg.jpg/220px-Anders_Hejlsberg.jpg"),
