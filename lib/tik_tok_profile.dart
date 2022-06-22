@@ -1,6 +1,7 @@
 import 'package:first_flutter/models/movie_model.dart';
 import 'package:first_flutter/constants/movie_list_constant.dart';
 import 'package:flutter/material.dart';
+
 class TikTok_Profile extends StatefulWidget {
   const TikTok_Profile({Key? key}) : super(key: key);
 
@@ -14,13 +15,10 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Tik Tok Profile",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 35
-        ),
-
+        title: Text(
+          "Tik Tok Profile",
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.black, fontSize: 35),
         ),
         centerTitle: true,
         // iconTheme: Icon(Icons.add),
@@ -28,7 +26,8 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
       body: _buildBody(),
     );
   }
-  Widget _buildBody(){
+
+  Widget _buildBody() {
     return Container(
       color: Colors.white,
       child: ListView(
@@ -39,20 +38,26 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
       ),
     );
   }
-  Widget _buildProfile(){
+
+  Widget _buildProfile() {
     return Container(
       child: Column(
         children: [
           _buildCircleImage(),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           _buildFollowText(),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           _buildButton(),
         ],
       ),
     );
   }
-  Widget _buildGridViewBuilder(){
+
+  Widget _buildGridViewBuilder() {
     return GridView.builder(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
@@ -72,7 +77,8 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
       },
     );
   }
-  Widget _buildButton(){
+
+  Widget _buildButton() {
     return SizedBox(
       width: 350,
       child: Row(
@@ -119,7 +125,8 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
       ),
     );
   }
-  Widget _buildFollowText(){
+
+  Widget _buildFollowText() {
     return SizedBox(
       width: 200,
       child: Row(
@@ -132,11 +139,13 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
       ),
     );
   }
-  Widget _buildCircleImage(){
+
+  Widget _buildCircleImage() {
+    // ignore: prefer_const_constructors
     return CircleAvatar(
       radius: 60,
-      backgroundImage: NetworkImage("https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg"),
+      backgroundImage: NetworkImage(
+          "https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg"),
     );
   }
 }
-

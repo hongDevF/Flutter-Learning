@@ -1,3 +1,4 @@
+import 'package:first_flutter/views/stack_slide_tik_tok_view.dart';
 import 'package:flutter/material.dart';
 import 'package:first_flutter/pages/main_page.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // debugShowCheckedModeBanner: false,
-      home: main_Page(),
+      home: Stack_slide_tik_tok_view(),
     );
   }
 }
