@@ -27,12 +27,20 @@ class MyChildrenPage extends StatelessWidget {
           ),
           Spacer(),
           IconButton(
-            icon: Icon(Icons.search, color: Colors.white,size: 30,),
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+              size: 30,
+            ),
             onPressed: () => print("play_arrowclicked"),
           ),
           Spacer(),
           IconButton(
-            icon: Icon(Icons.add_box, color: Colors.white,size: 35,),
+            icon: Icon(
+              Icons.add_box,
+              color: Colors.white,
+              size: 35,
+            ),
             onPressed: () => print("bookmark clicked"),
           ),
           Spacer(),
@@ -55,6 +63,7 @@ class MyChildrenPage extends StatelessWidget {
       ),
     );
   }
+
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: Colors.black,
@@ -122,7 +131,7 @@ class MyChildrenPage extends StatelessWidget {
           Text(
             "Following",
             style:
-            TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 16),
+                TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 16),
           ),
           SizedBox(
             width: 5,
@@ -160,7 +169,6 @@ class MyChildrenPage extends StatelessWidget {
       ],
     );
   }
-
   Widget _buildTikTokIcons() {
     return Container(
       child: Column(
@@ -174,7 +182,7 @@ class MyChildrenPage extends StatelessWidget {
           SizedBox(height: 20),
           InkWell(
             child:
-            Icon(CupertinoIcons.chat_bubble_text_fill, color: Colors.white),
+                Icon(CupertinoIcons.chat_bubble_text_fill, color: Colors.white),
             onTap: () => print("play_arrowclicked"),
           ),
           Text("1531", style: TextStyle(color: Colors.white)),
@@ -205,8 +213,8 @@ class MyChildrenPage extends StatelessWidget {
           child: IconButton(
             onPressed: () {},
             icon:
-            // ignore: prefer_const_constructors
-            Icon(Icons.play_circle_fill, color: Colors.white54, size: 100),
+                // ignore: prefer_const_constructors
+                Icon(Icons.play_circle_fill, color: Colors.white54, size: 100),
           ),
         ),
       ],
