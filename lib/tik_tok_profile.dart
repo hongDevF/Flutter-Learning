@@ -57,6 +57,12 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
     );
   }
 
+  // Widget _buildTest() {
+  //   return SingleChildScrollView(
+  //     child: ,
+  //   );
+  // }
+
   Widget _buildGridViewBuilder() {
     return GridView.builder(
       shrinkWrap: true,

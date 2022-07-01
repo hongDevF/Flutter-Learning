@@ -8,10 +8,9 @@ class MyChildrenPage extends StatelessWidget {
     return Scaffold(
       appBar: _buildAppBar(),
       body: _buildBody(),
-      bottomNavigationBar: _buildBottom(),
+      // bottomNavigationBar: _buildBottom()
     );
   }
-
   Widget _buildBottom() {
     return BottomAppBar(
       color: Colors.grey[900],
@@ -49,17 +48,18 @@ class MyChildrenPage extends StatelessWidget {
             onPressed: () => print("person clicked"),
           ),
           Spacer(),
-          // IconButton(
-          //   icon: Icon(CupertinoIcons.arrowshape_turn_up_right_fill,
-          //       color: Colors.white),
-          //   onPressed: () => print("share"),
-          // ),
+          IconButton(
+            icon: Icon(CupertinoIcons.arrowshape_turn_up_right_fill,
+                color: Colors.white),
+            onPressed: () => print("share"),
+          ),
           IconButton(
             icon: Icon(Icons.person, color: Colors.white),
             padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
             onPressed: () => print("more_horiz clicked"),
           ),
         ],
+    
       ),
     );
   }
