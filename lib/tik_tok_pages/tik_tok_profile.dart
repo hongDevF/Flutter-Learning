@@ -11,6 +11,7 @@ class TikTok_Profile extends StatefulWidget {
 
 class _TikTok_ProfileState extends State<TikTok_Profile> {
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -19,6 +20,7 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
           "Tik Tok Profile",
           textAlign: TextAlign.center,
           style: TextStyle(color: Colors.black, fontSize: 35),
+
         ),
         centerTitle: true,
         // iconTheme: Icon(Icons.add),
@@ -38,7 +40,6 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
       ),
     );
   }
-
   Widget _buildProfile() {
     return Container(
       child: Column(
@@ -83,7 +84,6 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
       },
     );
   }
-
   Widget _buildButton() {
     return SizedBox(
       width: 350,
