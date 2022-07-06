@@ -1,6 +1,10 @@
 // import 'dart:html';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'facebook/screens/login.dart';
 
 void main() {
   runApp(TestApp());
@@ -42,13 +46,11 @@ class Myhome extends StatelessWidget {
             //     child: Text("Header")),
 
             ListTile(
-              leading: Icon(
-                Icons.home,
-              ),
-              trailing: Icon(Icons.navigate_next),
-              title: const Text('home'),
-              onTap: () {
-                Navigator.pop(context);
+              leading:
+              Icon(Icons.add),
+              title: Text("home"),
+              onTap: (){
+                print("Home has clicked");
               },
             ),
             ListTile(
@@ -59,6 +61,16 @@ class Myhome extends StatelessWidget {
               title: const Text('home'),
               onTap: () {
                 Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.logout,
+              ),
+              trailing: Icon(Icons.navigate_next),
+              title: const Text('Go to facebook Login'),
+              onTap: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>LoginPage()));
               },
             )
           ],
@@ -79,24 +91,14 @@ class Myhome extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Container(
-          padding: EdgeInsets.fromLTRB(10, 20, 30, 40),
-          margin: EdgeInsets.fromLTRB(10, 20, 30, 40),
-          child: Text(
-            "កូនខ្មែរ",
-            style: TextStyle(fontFamily: "khmerMoul", fontSize: 34),
-          ),
-          color: Colors.green,
-        ),
-      ),
+      body: _buildBody(),
     );
   }
 
   Widget _buildBody() {
     return Container(
       alignment: Alignment.center,
-      color: Colors.black,
+      color: Colors.grey,
       child: Container(
         width: 300,
         height: 300,
@@ -112,13 +114,13 @@ class Myhome extends StatelessWidget {
             boxShadow: [
               BoxShadow(
                 color: Colors.pink.withOpacity(0.5),
-                offset: Offset(20, 20),
+                // offset: Offset(2/0, 20),
                 blurRadius: 10,
                 spreadRadius: 10,
               ),
               BoxShadow(
-                color: Colors.orange.withOpacity(0.6),
-                offset: Offset(5, 5),
+                color: Colors.white,
+                // offset: Offset(5, 20),
                 blurRadius: 10,
                 spreadRadius: 10,
               )

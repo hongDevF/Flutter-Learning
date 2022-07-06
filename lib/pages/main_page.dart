@@ -1,6 +1,9 @@
 import 'package:first_flutter/main.dart';
 import 'package:flutter/material.dart';
 import 'package:first_flutter/pages/build_page_body.dart';
+void main(){
+  runApp(main_Page());
+}
 class main_Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
