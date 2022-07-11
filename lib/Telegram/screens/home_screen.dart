@@ -64,8 +64,8 @@ class _home_screenState extends State<home_screen> {
             },
           ),
           ListTile(
-            title: Text("near group"),
-            leading: Icon(Icons.group),
+            title: Text("setting"),
+            leading: Icon(Icons.settings),
             onTap: () {
               Navigator.pop(context);
             },

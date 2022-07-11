@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'jsonplaceholder_page.dart';
-
-void main(){
-  runApp(SynceApp());
+import 'pages/jsonplaceholder_page.dart';
+void main() {
+  runApp(MyApp());
 }
-class SynceApp extends StatelessWidget {
-  const SynceApp({Key? key}) : super(key: key);
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: JsonPlaceholderPage(),
     );
   }
