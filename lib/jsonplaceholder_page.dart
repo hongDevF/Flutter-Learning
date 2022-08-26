@@ -2,14 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 class JsonPlaceholderPage extends StatefulWidget {
   const JsonPlaceholderPage({Key? key}) : super(key: key);
-
   @override
   State<JsonPlaceholderPage> createState() => _JsonPlaceholderPageState();
 }
-
 class _JsonPlaceholderPageState extends State<JsonPlaceholderPage> {
   @override
   Widget build(BuildContext context) {
@@ -22,7 +19,7 @@ class _JsonPlaceholderPageState extends State<JsonPlaceholderPage> {
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: Colors.purple,
-      title: Text("JSON Placeholder Page"),
+      title: Text("JSON Placeholder Page")
     );
   }
 
@@ -32,7 +29,6 @@ class _JsonPlaceholderPageState extends State<JsonPlaceholderPage> {
       child: _buildFutureBuilder(),
     );
   }
-
   Future<String> _getData() async {
     String url = "https://jsonplaceholder.typicode.com/posts?userId=3";
     try {
@@ -47,7 +43,6 @@ class _JsonPlaceholderPageState extends State<JsonPlaceholderPage> {
       // return e.toString(); //for debug
     }
   }
-
   Widget _buildFutureBuilder() {
     return FutureBuilder<String>(
       future: _getData(),
@@ -64,18 +59,15 @@ class _JsonPlaceholderPageState extends State<JsonPlaceholderPage> {
       },
     );
   }
-
   Widget _buildDisplay(String? data) {
     if (data == null) {
       return Icon(Icons.error);
     }
-
     List list = json.decode(data);
     // Map map1 = list[0];
     // print(map1);
     // print("map1['userId']: ${map1['userId']}");
     // print("map1['title']: ${map1['title']}");
-
     return ListView.builder(
       itemCount: list.length,
       itemBuilder: (context, index) {
@@ -83,7 +75,6 @@ class _JsonPlaceholderPageState extends State<JsonPlaceholderPage> {
       },
     );
   }
-
   Widget _buildItem(Map map1){
     int userId = map1['userId'];
     int id = map1['id'];

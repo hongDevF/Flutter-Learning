@@ -20,7 +20,7 @@ class _RandomUserPageState extends State<RandomUserPage> {
 
   AppBar _buildAppBar() {
     return AppBar(
-      backgroundColor: Colors.pinkAccent,
+      backgroundColor: Colors.red,
       title: Text("Random User Page"),
     );
   }

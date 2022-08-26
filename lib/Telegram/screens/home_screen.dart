@@ -14,8 +14,8 @@ class _home_screenState extends State<home_screen> {
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text("Telegram"),
-        actions: [Icon(Icons.search)],
+        title: Text("Tam Telegram"),
+        actions: [Icon(Icons.search,)],
       ),
       drawer: _buldDrawer(),
     );
@@ -79,7 +79,7 @@ class _home_screenState extends State<home_screen> {
           ),
           ListTile(
             title: Text("near group"),
-            leading: Icon(Icons.group),
+            leading: Icon(Icons.telegram),
             onTap: () {
               Navigator.pop(context);
             },
@@ -93,8 +93,8 @@ class _home_screenState extends State<home_screen> {
             ))),
           ),
           ListTile(
-            title: Text("near group"),
-            leading: Icon(Icons.group),
+            title: Text("Facebook"),
+            leading: Icon(Icons.facebook),
             onTap: () {
               Navigator.pop(context);
             },

@@ -1,4 +1,4 @@
-import 'package:first_flutter/rundomuser-module/pages/randomuser_page.dart';
+import 'package:first_flutter/rundomuser-module/splash_page.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp(SynceApp());
@@ -9,7 +9,7 @@ class SynceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: RandomUserPage(),
+      home: SplashPage(),
     );
   }
 }

@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import '../models/randomuser_model.dart';
 class RandomUserHelper{
   static Future<RandomUserModel> getData() async {
-    String url = "https://randomuser.me/api?results=50&page=1";
+    String url = "https://randomuser.me/api?results=100&page=1";
     try {
       http.Response response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {

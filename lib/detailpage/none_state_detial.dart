@@ -11,6 +11,7 @@ class StateDetailPage extends StatefulWidget {
 class _StateDetailPageState extends State<StateDetailPage> {
   // Dark Mode
   bool _dark = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
