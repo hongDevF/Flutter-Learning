@@ -1,5 +1,3 @@
-import 'package:first_flutter/instagram/pages/index.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -12,9 +10,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Home App"), actions: [
-        
-      ]),
+      appBar: AppBar(title: Text("Home App"), actions: []),
     );
   }
 }

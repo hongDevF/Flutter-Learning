@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:io';
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -23,6 +25,7 @@ class _LandScreenState extends State<LandScreen> {
   File? _image;
 
   final _picker = ImagePicker();
+
   _openGalary(BuildContext context) async {
     final XFile? pickedImage =
         await _picker.pickImage(source: ImageSource.gallery);
@@ -124,3 +127,4 @@ class _LandScreenState extends State<LandScreen> {
     );
   }
 }
+//TODO

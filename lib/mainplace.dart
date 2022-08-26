@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'jsonplaceholder_page.dart';
-void main(){
+
+void main() {
   runApp(JsonPlace());
 }
+
 class JsonPlace extends StatelessWidget {
   // const JsonPlace({Key? key}) : super(key: key);
   @override

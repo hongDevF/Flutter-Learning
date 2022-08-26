@@ -3,17 +3,19 @@ class RandomUserModel {
     required this.results,
     required this.info,
   });
+
   late final List<Result> results;
   late final Info info;
 
-  RandomUserModel.fromJson(Map<String, dynamic> json){
-    results = List.from(json['results']).map((e)=>Result.fromJson(e)).toList();
+  RandomUserModel.fromJson(Map<String, dynamic> json) {
+    results =
+        List.from(json['results']).map((e) => Result.fromJson(e)).toList();
     info = Info.fromJson(json['info']);
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
-    _data['results'] = results.map((e)=>e.toJson()).toList();
+    _data['results'] = results.map((e) => e.toJson()).toList();
     _data['info'] = info.toJson();
     return _data;
   }
@@ -34,6 +36,7 @@ class Result {
     required this.picture,
     required this.nat,
   });
+
   late final String gender;
   late final Name name;
   late final Location location;
@@ -47,7 +50,7 @@ class Result {
   late final Picture picture;
   late final String nat;
 
-  Result.fromJson(Map<String, dynamic> json){
+  Result.fromJson(Map<String, dynamic> json) {
     gender = json['gender'];
     name = Name.fromJson(json['name']);
     location = Location.fromJson(json['location']);
@@ -86,11 +89,12 @@ class Name {
     required this.first,
     required this.last,
   });
+
   late final String title;
   late final String first;
   late final String last;
 
-  Name.fromJson(Map<String, dynamic> json){
+  Name.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     first = json['first'];
     last = json['last'];
@@ -115,6 +119,7 @@ class Location {
     required this.coordinates,
     required this.timezone,
   });
+
   late final Street street;
   late final String city;
   late final String state;
@@ -123,7 +128,7 @@ class Location {
   late final Coordinates coordinates;
   late final Timezone timezone;
 
-  Location.fromJson(Map<String, dynamic> json){
+  Location.fromJson(Map<String, dynamic> json) {
     street = Street.fromJson(json['street']);
     city = json['city'];
     state = json['state'];
@@ -151,10 +156,11 @@ class Street {
     required this.number,
     required this.name,
   });
+
   late final int number;
   late final String name;
 
-  Street.fromJson(Map<String, dynamic> json){
+  Street.fromJson(Map<String, dynamic> json) {
     number = json['number'];
     name = json['name'];
   }
@@ -172,10 +178,11 @@ class Coordinates {
     required this.latitude,
     required this.longitude,
   });
+
   late final String latitude;
   late final String longitude;
 
-  Coordinates.fromJson(Map<String, dynamic> json){
+  Coordinates.fromJson(Map<String, dynamic> json) {
     latitude = json['latitude'];
     longitude = json['longitude'];
   }
@@ -193,10 +200,11 @@ class Timezone {
     required this.offset,
     required this.description,
   });
+
   late final String offset;
   late final String description;
 
-  Timezone.fromJson(Map<String, dynamic> json){
+  Timezone.fromJson(Map<String, dynamic> json) {
     offset = json['offset'];
     description = json['description'];
   }
@@ -219,6 +227,7 @@ class Login {
     required this.sha1,
     required this.sha256,
   });
+
   late final String uuid;
   late final String username;
   late final String password;
@@ -227,7 +236,7 @@ class Login {
   late final String sha1;
   late final String sha256;
 
-  Login.fromJson(Map<String, dynamic> json){
+  Login.fromJson(Map<String, dynamic> json) {
     uuid = json['uuid'];
     username = json['username'];
     password = json['password'];
@@ -255,10 +264,11 @@ class Dob {
     required this.date,
     required this.age,
   });
+
   late final String date;
   late final int age;
 
-  Dob.fromJson(Map<String, dynamic> json){
+  Dob.fromJson(Map<String, dynamic> json) {
     date = json['date'];
     age = json['age'];
   }
@@ -276,10 +286,11 @@ class Registered {
     required this.date,
     required this.age,
   });
+
   late final String date;
   late final int age;
 
-  Registered.fromJson(Map<String, dynamic> json){
+  Registered.fromJson(Map<String, dynamic> json) {
     date = json['date'];
     age = json['age'];
   }
@@ -297,10 +308,11 @@ class Id {
     required this.name,
     this.value,
   });
+
   late final String name;
   late final String? value;
 
-  Id.fromJson(Map<String, dynamic> json){
+  Id.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     value = null;
   }
@@ -319,11 +331,12 @@ class Picture {
     required this.medium,
     required this.thumbnail,
   });
+
   late final String large;
   late final String medium;
   late final String thumbnail;
 
-  Picture.fromJson(Map<String, dynamic> json){
+  Picture.fromJson(Map<String, dynamic> json) {
     large = json['large'];
     medium = json['medium'];
     thumbnail = json['thumbnail'];
@@ -345,12 +358,13 @@ class Info {
     required this.page,
     required this.version,
   });
+
   late final String seed;
   late final int results;
   late final int page;
   late final String version;
 
-  Info.fromJson(Map<String, dynamic> json){
+  Info.fromJson(Map<String, dynamic> json) {
     seed = json['seed'];
     results = json['results'];
     page = json['page'];
