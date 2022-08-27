@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import '../helpers/randomuser_helper.dart';
 import '../models/randomuser_model.dart';
+
 class RandomUserPage extends StatefulWidget {
   const RandomUserPage({Key? key}) : super(key: key);
 
@@ -62,10 +62,17 @@ class _RandomUserPageState extends State<RandomUserPage> {
     );
   }
 
-  Widget _buildItem(Result item){
+  Widget _buildItem(Result item) {
     return Card(
       child: ListTile(
-        leading: Image.network(item.picture.large),
+        leading: CircleAvatar(
+          backgroundColor: Color.fromARGB(255, 11, 167, 29),
+          radius: 30,
+          child: CircleAvatar(
+            radius: 25,
+            backgroundImage: NetworkImage("${item.picture.large}"),
+          ),
+        ),
         title: Text("${item.name.first} ${item.name.last}"),
         subtitle: Text("${item.location.city}, ${item.location.country}"),
         trailing: Text("${item.nat}"),

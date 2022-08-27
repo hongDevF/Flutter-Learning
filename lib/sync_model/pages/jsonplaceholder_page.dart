@@ -64,10 +64,10 @@ class _JsonPlaceholderPageState extends State<JsonPlaceholderPage> {
   Widget _buildItem(PostModel item) {
     return Card(
       child: ListTile(
-        leading: Text("${item.albumId}"),
+        leading: Image.network("${item.thumbnailUrl}"),
         title: Text("${item.title}"),
         subtitle: Text("${item.url}"),
-        trailing: Image.network("${item.thumbnailUrl}"),
+        trailing: Text("${item.albumId}"),
       ),
     );
   }
