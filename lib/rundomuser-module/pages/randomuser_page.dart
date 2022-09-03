@@ -9,6 +9,8 @@ class RandomUserPage extends StatefulWidget {
   State<RandomUserPage> createState() => _RandomUserPageState();
 }
 
+TextStyle textColor = TextStyle(color: Colors.white);
+
 class _RandomUserPageState extends State<RandomUserPage> {
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class _RandomUserPageState extends State<RandomUserPage> {
 
   Widget _buildBody() {
     return Container(
+      color: Colors.black,
       alignment: Alignment.center,
       child: _buildFutureBuilder(),
     );
@@ -64,6 +67,7 @@ class _RandomUserPageState extends State<RandomUserPage> {
 
   Widget _buildItem(Result item) {
     return Card(
+      color: Color.fromARGB(255, 125, 128, 125),
       child: ListTile(
         leading: CircleAvatar(
           backgroundColor: Color.fromARGB(255, 11, 167, 29),
@@ -73,9 +77,16 @@ class _RandomUserPageState extends State<RandomUserPage> {
             backgroundImage: NetworkImage("${item.picture.large}"),
           ),
         ),
-        title: Text("${item.name.first} ${item.name.last}"),
-        subtitle: Text("${item.location.city}, ${item.location.country}"),
-        trailing: Text("${item.nat}"),
+        title: Text(
+          "${item.name.first} ${item.name.last}",
+          style: textColor,
+        ),
+        subtitle: Text("${item.location.city}, ${item.location.country}",
+            style: textColor),
+        trailing: Text(
+          "${item.nat}",
+          style: textColor,
+        ),
       ),
     );
   }

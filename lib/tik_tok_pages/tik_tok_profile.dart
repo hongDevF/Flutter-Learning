@@ -43,6 +43,9 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
     return Container(
       child: Column(
         children: [
+          SizedBox(
+            height: 20,
+          ),
           _buildCircleImage(),
           SizedBox(
             height: 10,
@@ -56,12 +59,6 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
       ),
     );
   }
-
-  // Widget _buildTest() {
-  //   return SingleChildScrollView(
-  //     child: ,
-  //   );
-  // }
 
   Widget _buildGridViewBuilder() {
     return GridView.builder(
@@ -132,15 +129,28 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
     );
   }
 
+  var styeTEx = TextStyle(
+      color: Color.fromARGB(214, 11, 0, 0),
+      fontWeight: FontWeight.bold,
+      fontSize: 20);
   Widget _buildFollowText() {
     return SizedBox(
       width: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text("56"),
-          Text("12K"),
-          Text("5.6K"),
+          Text(
+            "56",
+            style: styeTEx,
+          ),
+          Text(
+            "12K",
+            style: styeTEx,
+          ),
+          Text(
+            "5.6K",
+            style: styeTEx,
+          ),
         ],
       ),
     );
@@ -149,9 +159,13 @@ class _TikTok_ProfileState extends State<TikTok_Profile> {
   Widget _buildCircleImage() {
     // ignore: prefer_const_constructors
     return CircleAvatar(
-      radius: 60,
-      backgroundImage: NetworkImage(
-          "https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg"),
+      backgroundColor: Colors.red,
+      radius: 50,
+      child: CircleAvatar(
+        radius: 45,
+        backgroundImage: NetworkImage(
+            "https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg"),
+      ),
     );
   }
 }

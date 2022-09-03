@@ -39,6 +39,7 @@ class Myhome extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(child: Image.asset("assets/images/key1.jpg")),
+
             // const DrawerHeader(
             //     decoration: BoxDecoration(
             //       color: Colors.blue,
@@ -46,10 +47,9 @@ class Myhome extends StatelessWidget {
             //     child: Text("Header")),
 
             ListTile(
-              leading:
-              Icon(Icons.add),
+              leading: Icon(Icons.add),
               title: Text("home"),
-              onTap: (){
+              onTap: () {
                 print("Home has clicked");
               },
             ),
@@ -70,7 +70,8 @@ class Myhome extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               title: const Text('Go to facebook Login'),
               onTap: () {
-                Navigator.push(context,MaterialPageRoute(builder: (context)=>LoginPage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LoginPage()));
               },
             )
           ],
@@ -107,8 +108,9 @@ class Myhome extends StatelessWidget {
             shape: BoxShape.circle,
             image: DecorationImage(
               image: NetworkImage(
-                  "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.remove.bg%2F&psig=AOvVaw3z0GqGd1GOBqyXaER6Voeh&ust=1652248240161000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCNj4h72e1PcCFQAAAAAdAAAAABAD"),
-              fit: BoxFit.cover,
+                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.remove.bg%2F&psig=AOvVaw3z0GqGd1GOBqyXaER6Voeh&ust=1652248240161000&source=images&cd=vfe&ved=0CAkQjRxqFwoTCNj4h72e1PcCFQAAAAAdAAAAABAD",
+              ),
+              fit: BoxFit.fill,
               alignment: Alignment(-0.8, 0),
             ),
             boxShadow: [

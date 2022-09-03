@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:first_flutter/API/screens/Product.dart';
 import 'package:flutter/material.dart';
-import 'api1.dart';
 
 void main(List<String> args) {
   runApp(MainPage());
@@ -16,7 +15,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyApi(),
+      home: Product(),
     );
   }
 }
