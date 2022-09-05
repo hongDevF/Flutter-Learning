@@ -29,7 +29,7 @@ class _pageViewState extends State<pageView> {
             Container(
               height: 100,
               alignment: Alignment.center,
-              color: Colors.greenAccent,
+              color: Color.fromARGB(255, 225, 238, 232),
               child: (const Text("test")),
             ),
             Container(),
@@ -38,6 +38,7 @@ class _pageViewState extends State<pageView> {
         appBar: AppBar(
           centerTitle: true,
           title: const Text("My app bar"),
+          actions: [Padding(padding: EdgeInsets.all(8.0)), Icon(Icons.home)],
         ),
         body: SingleChildScrollView(
           child: Column(children: [
@@ -48,6 +49,16 @@ class _pageViewState extends State<pageView> {
             Container(
               height: 100,
               color: Colors.black,
+              child: Center(
+                child: Image.network(
+                  "https://imgs.search.brave.com/d8Gbrf3bWOv9P4Qr3lKudjd_6tStf9hTWuJFo4bSZ7c/rs:fit:713:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC4y/cVJLUGtwNzR5VXVH/N05KdlFCOE53SGFF/NyZwaWQ9QXBp",
+                  fit: BoxFit.fill,
+                  width: 300,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Container(
               height: 100,

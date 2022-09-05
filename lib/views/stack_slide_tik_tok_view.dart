@@ -1,3 +1,4 @@
+import 'package:first_flutter/tik_tok_pages/tik_tok_profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:first_flutter/constants/movie_list_constant.dart';
@@ -30,7 +31,7 @@ class Stack_slide_tik_tok_view extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         Positioned.fill(child: (Image.network(Item.image, fit: BoxFit.cover))),
-        Positioned(child: _buildTitleFollow(), top: 50),
+        Positioned(child: _buildTitleFollow(), top: 40),
         Positioned(right: 20, bottom: 20, child: _buildTikTokIcons()),
         Positioned(left: 20, bottom: 20, child: _buildTikTokTexts()),
       ],
@@ -122,54 +123,60 @@ class Stack_slide_tik_tok_view extends StatelessWidget {
   }
 
   Widget _buildBottom() {
-    return BottomAppBar(
-      color: Colors.grey[900],
-      child: Row(
-        children: [
-          IconButton(
-            icon: Icon(
-              Icons.home,
-              color: Colors.white,
+    return Builder(builder: (context) {
+      return BottomAppBar(
+        color: Colors.grey[900],
+        child: Row(
+          children: [
+            IconButton(
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+              onPressed: () => print("home clicked"),
             ),
-            padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
-            onPressed: () => print("home clicked"),
-          ),
-          Spacer(),
-          IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
-              size: 30,
+            Spacer(),
+            IconButton(
+              icon: Icon(
+                Icons.search,
+                color: Colors.white,
+                size: 30,
+              ),
+              onPressed: () => print("play_arrowclicked"),
             ),
-            onPressed: () => print("play_arrowclicked"),
-          ),
-          Spacer(),
-          IconButton(
-            icon: Icon(
-              Icons.add_box,
-              color: Colors.white,
-              size: 35,
+            Spacer(),
+            IconButton(
+              icon: Icon(
+                Icons.add_box,
+                color: Colors.white,
+                size: 35,
+              ),
+              onPressed: () => print("bookmark clicked"),
             ),
-            onPressed: () => print("bookmark clicked"),
-          ),
-          Spacer(),
-          IconButton(
-            icon: Icon(Icons.inbox, color: Colors.white),
-            onPressed: () => print("person clicked"),
-          ),
-          Spacer(),
-          // IconButton(
-          //   icon: Icon(CupertinoIcons.arrowshape_turn_up_right_fill,
-          //       color: Colors.white),
-          //   onPressed: () => print("share"),
-          // ),
-          IconButton(
-            icon: Icon(Icons.person, color: Colors.white),
-            padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
-            onPressed: () => print("more_horiz clicked"),
-          ),
-        ],
-      ),
-    );
+            Spacer(),
+            IconButton(
+              icon: Icon(Icons.inbox, color: Colors.white),
+              onPressed: () => print("test"),
+            ),
+            Spacer(),
+            // IconButton(
+            //   icon: Icon(CupertinoIcons.arrowshape_turn_up_right_fill,
+            //       color: Colors.white),
+            //   onPressed: () => print("share"),
+            // ),
+            IconButton(
+                icon: Icon(Icons.person, color: Colors.white),
+                padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
+                onPressed: () => {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => TikTok_Profile()))
+                    }),
+          ],
+        ),
+      );
+    });
   }
 }
