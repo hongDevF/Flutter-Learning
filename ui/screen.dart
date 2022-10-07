@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(uiApp());
-
 }
+
 class uiApp extends StatelessWidget {
   const uiApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,9 +13,9 @@ class uiApp extends StatelessWidget {
     );
   }
 }
+
 class Screen1 extends StatelessWidget {
   const Screen1({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +23,9 @@ class Screen1 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('TEST',
-          style:TextStyle(
+        title: Text(
+          'TEST',
+          style: TextStyle(
             fontFamily: "khmerMoul",
             fontSize: 25,
           ),
@@ -59,7 +59,6 @@ class Screen1 extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.message),
               title: Text('Messages'),
-
             ),
             ListTile(
               leading: Icon(Icons.account_circle),
@@ -68,21 +67,15 @@ class Screen1 extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.settings),
               title: Text('Settings'),
-
             )
-
           ],
-
         ),
-
-
-
       ),
       // appBar: AppBar,
-      body:Container(
+      body: Container(
         width: size.width,
         height: size.height,
-        child:Center(
+        child: Center(
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.only(left: 30.0, right: 30.0),
@@ -91,8 +84,7 @@ class Screen1 extends StatelessWidget {
             child: Text('Hello'),
           ),
         ),
-      ) ,
+      ),
     );
   }
 }
-

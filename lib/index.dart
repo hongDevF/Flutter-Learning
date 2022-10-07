@@ -1,7 +1,4 @@
 // import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'facebook/screens/login.dart';
@@ -39,13 +36,6 @@ class Myhome extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(child: Image.asset("assets/images/key1.jpg")),
-
-            // const DrawerHeader(
-            //     decoration: BoxDecoration(
-            //       color: Colors.blue,
-            //     ),
-            //     child: Text("Header")),
-
             ListTile(
               leading: Icon(Icons.add),
               title: Text("home"),

@@ -15,9 +15,16 @@ class _Animation1State extends State<Animation1> {
         backgroundColor: Color.fromARGB(66, 138, 115, 211),
         title: Text("my AppBar"),
       ),
+      drawer: Drawer(
+        backgroundColor: Colors.black,
+        child: Container(
+          alignment: Alignment.center,
+          child: Row(children: [ListBody()]),
+        ),
+      ),
       body: Center(
         child: AnimatedSize(
-          duration: Duration(seconds: 3),
+          duration: Duration(seconds: 1),
           child: Container(
             height: double.infinity,
             child: Image.network(

@@ -1,4 +1,3 @@
-import 'package:first_flutter/My_log.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,13 +5,12 @@ void main() {
   print("int numbers: $numbers");
 
   List<double> dNumbers = [];
-  for(int index = 0; index < numbers.length; index++){
+  for (int index = 0; index < numbers.length; index++) {
     dNumbers.add(numbers[index].toDouble());
   }
   print("double dNumbers: $dNumbers");
 
   runApp(const MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
@@ -48,7 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  String pic = "https://cracksystem.net/wp-content/uploads/2021/05/enscape_icon.png";
+  String pic =
+      "https://cracksystem.net/wp-content/uploads/2021/05/enscape_icon.png";
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
               leading: Icon(Icons.home),
               title: Text("Home"),
               trailing: Icon(Icons.navigate_next),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
               },
             ),
@@ -73,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
               leading: Icon(Icons.contact_mail),
               title: Text("Contact Support"),
               trailing: Icon(Icons.navigate_next),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
               },
             ),
@@ -81,16 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Center(
-
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-
               color: Colors.redAccent.withOpacity(0.03),
               child: Row(
-
                 children: [
                   Image.asset("assets/images/p8.jpg")
                   // Image.network('https://imgs.search.brave.com/QYgoQwToQdUhsH_Jt-lsW809YzJUNshb5-TjKM-rnH0/rs:fit:632:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC53/UjVVTllIaGp6NWtu/Y05zTjRNV0tnSGFG/aiZwaWQ9QXBp')
@@ -98,19 +93,16 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-
               color: Colors.redAccent.withOpacity(0.03),
               child: Row(
-
                 children: [
-                  Image.network('https://imgs.search.brave.com/QYgoQwToQdUhsH_Jt-lsW809YzJUNshb5-TjKM-rnH0/rs:fit:632:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC53/UjVVTllIaGp6NWtu/Y05zTjRNV0tnSGFG/aiZwaWQ9QXBp')
+                  Image.network(
+                      'https://imgs.search.brave.com/QYgoQwToQdUhsH_Jt-lsW809YzJUNshb5-TjKM-rnH0/rs:fit:632:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC53/UjVVTllIaGp6NWtu/Y05zTjRNV0tnSGFG/aiZwaWQ9QXBp')
                 ],
               ),
             ),
-
             const Text(
               'You have pushed the button this many times:',
-
             ),
             Text(
               '$_counter',
@@ -127,4 +119,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

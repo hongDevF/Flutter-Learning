@@ -1,11 +1,7 @@
-import 'package:first_flutter/animation/Stack1.dart';
-import 'package:first_flutter/animation/video/page.dart';
+import 'package:first_flutter/animation/Animation1.dart';
 import 'package:flutter/material.dart';
 
-import 'Animation1.dart';
-import 'ShowDialog.dart';
-
-void main(List<String> args) {
+void main() {
   runApp(myAnimation());
 }
 

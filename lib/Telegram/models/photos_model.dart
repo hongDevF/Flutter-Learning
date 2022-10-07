@@ -1,12 +1,9 @@
-import 'package:flutter/material.dart';
-void main(){
+void main() {
   // Image.image()
 }
-class Image{
+
+class Image {
   String image;
   String img_title;
-  Image({
-    this.image=("no image"),
-    this.img_title=("no title")
-});
+  Image({this.image = ("no image"), this.img_title = ("no title")});
 }

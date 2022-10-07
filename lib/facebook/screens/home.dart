@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -9,15 +9,12 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Center(
         child: Container(
-          child: Text("teset",style: TextStyle(color: Colors.red),),
+          child: Text(
+            "teset",
+            style: TextStyle(color: Colors.red),
+          ),
         ),
       ),
     );
-  }
-  Widget _builHomeBody(){
-    return Container(
-
-    );
-
   }
 }

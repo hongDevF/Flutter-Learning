@@ -11,58 +11,6 @@ class MyChildrenPage extends StatelessWidget {
       // bottomNavigationBar: _buildBottom()
     );
   }
-  Widget _buildBottom() {
-    return BottomAppBar(
-      color: Colors.grey[900],
-      child: Row(
-        children: [
-          IconButton(
-            icon: Icon(
-              Icons.home,
-              color: Colors.white,
-            ),
-            padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
-            onPressed: () => print("home clicked"),
-          ),
-          Spacer(),
-          IconButton(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
-              size: 30,
-            ),
-            onPressed: () => print("play_arrowclicked"),
-          ),
-          Spacer(),
-          IconButton(
-            icon: Icon(
-              Icons.add_box,
-              color: Colors.white,
-              size: 35,
-            ),
-            onPressed: () => print("bookmark clicked"),
-          ),
-          Spacer(),
-          IconButton(
-            icon: Icon(Icons.inbox, color: Colors.white),
-            onPressed: () => print("person clicked"),
-          ),
-          Spacer(),
-          IconButton(
-            icon: Icon(CupertinoIcons.arrowshape_turn_up_right_fill,
-                color: Colors.white),
-            onPressed: () => print("share"),
-          ),
-          IconButton(
-            icon: Icon(Icons.person, color: Colors.white),
-            padding: EdgeInsets.fromLTRB(0, 0, 30, 0),
-            onPressed: () => print("more_horiz clicked"),
-          ),
-        ],
-    
-      ),
-    );
-  }
 
   AppBar _buildAppBar() {
     return AppBar(
@@ -169,6 +117,7 @@ class MyChildrenPage extends StatelessWidget {
       ],
     );
   }
+
   Widget _buildTikTokIcons() {
     return Container(
       child: Column(

@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 
-void main(){
+void main() {
   runApp(First_run());
 }
+
 class First_run extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,12 +13,9 @@ class First_run extends StatelessWidget {
         backgroundColor: Colors.redAccent,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: () {},
         child: Icon(Icons.add_box),
       ),
     );
-
   }
 }
-
-
