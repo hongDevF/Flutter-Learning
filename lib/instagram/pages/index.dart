@@ -12,5 +12,5 @@ class Home extends StatelessWidget {
     return const MaterialApp(
       home: pageView(),
     );
-  } //TODO: TESTER ADD
+  }
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_element
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -301,7 +303,9 @@ class MyChildrenPage extends StatelessWidget {
 
   Widget _buildMicIcon() {
     return IconButton(
-      onPressed: () {},
+      onPressed: () {
+        print("has been clicked!");
+      },
       icon: Icon(Icons.mic),
     );
   }
