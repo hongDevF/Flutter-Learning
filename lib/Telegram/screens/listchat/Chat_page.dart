@@ -1,6 +1,6 @@
-import 'package:first_flutter/Telegram/screens/Contact_Profile.dart';
-import 'package:first_flutter/Telegram/screens/util/Message_Letf.dart';
-import 'package:first_flutter/Telegram/screens/util/Message_right.dart';
+import 'package:first_flutter/Telegram/screens/profile/Contact_Profile.dart';
+import 'package:first_flutter/Telegram/screens/listchat/util/Message_Letf.dart';
+import 'package:first_flutter/Telegram/screens/listchat/util/Message_right.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatefulWidget {

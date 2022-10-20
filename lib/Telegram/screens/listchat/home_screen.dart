@@ -1,7 +1,7 @@
-import 'package:first_flutter/Telegram/screens/util/list_view.dart';
+import 'package:first_flutter/Telegram/screens/listchat/util/list_view.dart';
 import 'package:flutter/material.dart';
 
-import 'util/my_profile_page.dart';
+import '../profile/my_profile_page.dart';
 
 class home_screen extends StatefulWidget {
   const home_screen({Key? key}) : super(key: key);

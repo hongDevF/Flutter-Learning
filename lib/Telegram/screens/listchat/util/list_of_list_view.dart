@@ -1,4 +1,4 @@
-import 'package:first_flutter/Telegram/screens/Chat_page.dart';
+import 'package:first_flutter/Telegram/screens/listchat/Chat_page.dart';
 import 'package:flutter/material.dart';
 
 class ListOfListView extends StatelessWidget {

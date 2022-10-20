@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:first_flutter/models/movie_model.dart';
 import 'package:first_flutter/constants/movie_list_constant.dart';
 import 'package:flutter/material.dart';

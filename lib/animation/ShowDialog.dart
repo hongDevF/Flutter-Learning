@@ -14,14 +14,15 @@ class myDialog extends StatelessWidget {
           child: Text("Show dialog"),
           onPressed: () {
             showDialog(
-                context: context,
-                builder: (context) => AboutDialog(
-                      applicationIcon: Icon(Icons.home),
-                      applicationLegalese: "legalese",
-                      applicationName: "Flutter App",
-                      // applicationVersion: "version 3.0.0",
-                      children: [Text("this is text built by flutter ")],
-                    ));
+              context: context,
+              builder: (context) => AboutDialog(
+                applicationIcon: Icon(Icons.home),
+                applicationLegalese: "legalese",
+                applicationName: "Flutter App",
+                // applicationVersion: "version 3.0.0",
+                children: [Text("this is text built by flutter ")],
+              ),
+            );
           },
         ),
       ),
