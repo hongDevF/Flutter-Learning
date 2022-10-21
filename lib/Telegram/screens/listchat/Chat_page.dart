@@ -1,6 +1,6 @@
+import 'package:first_flutter/Telegram/screens/listchat/util/chat_detail_page.dart';
 import 'package:first_flutter/Telegram/screens/profile/Contact_Profile.dart';
-import 'package:first_flutter/Telegram/screens/listchat/util/Message_Letf.dart';
-import 'package:first_flutter/Telegram/screens/listchat/util/Message_right.dart';
+
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatefulWidget {
@@ -33,34 +33,7 @@ class _ChatPageState extends State<ChatPage> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 10),
-        child: SingleChildScrollView(
-          child: Column(children: [
-            Center(
-              child: Container(
-                width: 100,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.grey,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("12/02/2022"),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            MessageRight(),
-            MessagesLetf(),
-            MessageRight(),
-            MessagesLetf(),
-            MessageRight(),
-            MessagesLetf(),
-          ]),
-        ),
+        child: ChatDetailPage(),
       ),
     );
   }

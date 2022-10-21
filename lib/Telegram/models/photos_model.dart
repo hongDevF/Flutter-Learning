@@ -1,9 +1,15 @@
-void main() {
-  // Image.image()
-}
-
-class Image {
+class UserModel {
   String image;
-  String img_title;
-  Image({this.image = ("no image"), this.img_title = ("no title")});
+  String title_name;
+  String sub_title;
+  int hour;
+  int minute;
+
+  UserModel({
+    this.image = ("no image"),
+    this.title_name = ("no title"),
+    this.sub_title = "no subtitle",
+    this.hour = 0,
+    this.minute = 0,
+  });
 }
