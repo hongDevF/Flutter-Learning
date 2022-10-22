@@ -1,6 +1,7 @@
 import 'package:first_flutter/Telegram/screens/listchat/util/list_view.dart';
 import 'package:flutter/material.dart';
 
+import '../addmores/add_more_page.dart';
 import '../profile/my_profile_page.dart';
 
 class home_screen extends StatefulWidget {
@@ -14,6 +15,7 @@ class _home_screenState extends State<home_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // !App bar
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -30,6 +32,18 @@ class _home_screenState extends State<home_screen> {
           )
         ],
       ),
+      // ! FloatAction Button
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => AddMore(),
+            ),
+          );
+        },
+        child: Icon(Icons.note_alt_outlined),
+      ),
+      // ! body List chat
       body: List_View(),
       drawer: _buldDrawer(),
     );

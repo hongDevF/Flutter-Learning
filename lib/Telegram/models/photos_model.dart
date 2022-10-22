@@ -4,6 +4,7 @@ class UserModel {
   String sub_title;
   int hour;
   int minute;
+  String status;
 
   UserModel({
     this.image = ("no image"),
@@ -11,5 +12,6 @@ class UserModel {
     this.sub_title = "no subtitle",
     this.hour = 0,
     this.minute = 0,
+    this.status = "",
   });
 }

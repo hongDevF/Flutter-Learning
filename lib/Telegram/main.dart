@@ -7,8 +7,6 @@ void main() {
 }
 
 class TeleGram extends StatelessWidget {
-  // const TeleGram({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
