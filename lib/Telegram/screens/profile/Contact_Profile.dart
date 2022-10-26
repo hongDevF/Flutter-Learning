@@ -15,10 +15,6 @@ class _ContactProfileState extends State<ContactProfile> {
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.red,
-            // leading: IconButton(
-            //   icon: Icon(Icons.menu),
-            //   onPressed: () {},
-            // ),
             floating: true,
             expandedHeight: 300,
             pinned: true,
@@ -82,11 +78,8 @@ class _ContactProfileState extends State<ContactProfile> {
 
 Widget _AppDrawer() {
   return Drawer(
-    
     child: ListView(
-      children: [
-        
-      ],
+      children: [],
     ),
   );
 }
