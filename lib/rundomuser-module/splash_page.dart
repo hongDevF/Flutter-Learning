@@ -10,14 +10,13 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-
   @override
   void initState() {
     super.initState();
     Future.delayed(
-      Duration(seconds:3),
+      Duration(seconds: 3),
       () {
-        if(mounted){
+        if (mounted) {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
               builder: (context) => RandomUserPage(),
@@ -32,7 +31,11 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Icon(Icons.facebook, size: 100,color: Colors.blue,),
+        child: Icon(
+          Icons.facebook,
+          size: 100,
+          color: Colors.blue,
+        ),
       ),
     );
   }
