@@ -72,7 +72,7 @@ class _StateDetailPageState extends State<StateDetailPage> {
             icon: Icon(Icons.remove),
           ),
           IconButton(
-            color: _dark ? Colors.blueGrey[900] : Colors.white,
+            color: _dark ? Colors.blue[200] : Colors.white,
             onPressed: () {
               context.read<CounterLogic>().increase();
             },

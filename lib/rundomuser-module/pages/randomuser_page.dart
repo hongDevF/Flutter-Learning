@@ -46,7 +46,9 @@ class _RandomUserPageState extends State<RandomUserPage> {
         if (snapshot.connectionState == ConnectionState.done) {
           return _buildDisplay(snapshot.data);
         } else {
-          return CircularProgressIndicator();
+          return CircularProgressIndicator(
+            color: Colors.red,
+          );
         }
       },
     );

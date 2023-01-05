@@ -15,7 +15,7 @@ class RandomUserHelper {
         throw Exception("Error while reading, code: ${response.statusCode}");
       }
     } catch (error) {
-      throw Exception("Error ${error.toString()}");
+      throw Exception("Call api has Error please fix it ${error.toString()}");
     }
   }
 }

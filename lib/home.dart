@@ -1,16 +1,11 @@
-import 'package:flutter/material.dart';
+import 'dart:convert';
 
-void main(List<String> args) {
-  runApp(Home());
-}
+import 'package:crypto/crypto.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Home App"), actions: []),
-    );
-  }
+void main() {
+  var code = utf8.encode("test");
+  var value = sha512.convert(code);
+  var decrypt = utf8.decode(value);
+  print(decrypt);
+  String name = "dara";
 }
