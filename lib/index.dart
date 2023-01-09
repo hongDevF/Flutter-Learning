@@ -1,8 +1,6 @@
 // import 'dart:html';
 import 'package:flutter/material.dart';
 
-import 'facebook/screens/login.dart';
-
 void main() {
   runApp(TestApp());
 }
@@ -60,8 +58,8 @@ class Myhome extends StatelessWidget {
               trailing: Icon(Icons.navigate_next),
               title: const Text('Go to facebook Login'),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginPage()));
+                // Navigator.push(context,
+                //     MaterialPageRoute(builder: (context) => LoginPage()));
               },
             )
           ],
