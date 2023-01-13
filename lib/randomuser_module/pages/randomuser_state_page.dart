@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../rundomuser-module/splash_page.dart';
 import '../constants/status_enum.dart';
 import '../logics/randomuser_logic.dart';
 import '../models/randomuser_model.dart';

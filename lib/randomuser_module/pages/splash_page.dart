@@ -1,9 +1,14 @@
-
 import 'package:first_flutter/randomuser_module/pages/randomuser_state_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../logics/randomuser_logic.dart';
+
+void main(List<String> args) {
+  runApp(MaterialApp(
+    home: SplashPage(),
+  ));
+}
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
