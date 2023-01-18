@@ -4,12 +4,6 @@ import 'package:provider/provider.dart';
 
 import '../logics/randomuser_logic.dart';
 
-void main(List<String> args) {
-  runApp(MaterialApp(
-    home: SplashPage(),
-  ));
-}
-
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
 

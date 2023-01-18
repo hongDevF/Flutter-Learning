@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../rundomuser-module/splash_page.dart';
 import '../constants/status_enum.dart';
 import '../logics/randomuser_logic.dart';
 import '../models/randomuser_model.dart';
@@ -16,7 +15,6 @@ class RandomUserStatePage extends StatefulWidget {
 
 class _RandomUserStatePageState extends State<RandomUserStatePage> {
   bool _showIcon = false;
-
   @override
   void initState() {
     super.initState();
@@ -41,6 +39,7 @@ class _RandomUserStatePageState extends State<RandomUserStatePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purpleAccent,
       appBar: _buildAppBar(),
       body: _buildBody(),
       floatingActionButton: _showIcon ? _buildFloating() : null,
@@ -161,24 +160,39 @@ class _RandomUserStatePageState extends State<RandomUserStatePage> {
   Widget _buildItem(Result item) {
     bool isFavorite = context.watch<RandomUserLogic>().isFavorite(item);
 
-    return Card(
-      child: ListTile(
-        leading: Image.network(item.picture.large),
-        title: Text("${item.name.first} ${item.name.last}"),
-        subtitle: Text("${item.location.city}, ${item.location.country}"),
-        trailing: IconButton(
-          onPressed: () {
-            if (isFavorite) {
-              context.read<RandomUserLogic>().removeFromFavorite(item);
-            } else {
-              context.read<RandomUserLogic>().addToFavorite(item);
-            }
-          },
-          icon: isFavorite
-              ? Icon(Icons.favorite, color: Colors.red)
-              : Icon(Icons.favorite_border),
+    return Column(
+      children: [
+        Card(
+          elevation: 0,
+          color: Colors.transparent,
+          child: ListTile(
+            horizontalTitleGap: 0,
+            contentPadding: EdgeInsets.all(2),
+            leading: CircleAvatar(
+              radius: 40,
+              backgroundImage: NetworkImage(item.picture.large),
+            ),
+            title: Text("${item.name.first} ${item.name.last}"),
+            subtitle: Text("${item.location.city}, ${item.location.country}"),
+            trailing: IconButton(
+              onPressed: () {
+                if (isFavorite) {
+                  context.read<RandomUserLogic>().removeFromFavorite(item);
+                } else {
+                  context.read<RandomUserLogic>().addToFavorite(item);
+                }
+              },
+              icon: isFavorite
+                  ? Icon(Icons.favorite, color: Colors.red)
+                  : Icon(Icons.favorite_border),
+            ),
+          ),
         ),
-      ),
+        Divider(
+          color: Colors.red,
+          height: 5,
+        ),
+      ],
     );
   }
 }
