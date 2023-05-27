@@ -39,7 +39,7 @@ class _RandomUserStatePageState extends State<RandomUserStatePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purpleAccent,
+      backgroundColor: Colors.grey,
       appBar: _buildAppBar(),
       body: _buildBody(),
       floatingActionButton: _showIcon ? _buildFloating() : null,
@@ -129,7 +129,6 @@ class _RandomUserStatePageState extends State<RandomUserStatePage> {
 
   Widget _buildDisplay() {
     // RandomUserModel randomUserModel = context.watch<RandomUserLogic>().randomUserModel;
-
     List<Result> resultList = context.watch<RandomUserLogic>().resultList;
 
     return RefreshIndicator(

@@ -1,7 +1,6 @@
 import 'package:first_flutter/randomuser_module/pages/randomuser_state_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../logics/randomuser_logic.dart';
 
 class SplashPage extends StatefulWidget {

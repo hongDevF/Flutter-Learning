@@ -69,6 +69,7 @@ class RandomUserLogic extends ChangeNotifier {
       http.Response response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
         _randomUserModel = await compute(_getRandomUser, response.body);
+
         if (refreshed) {
           _resultList = _randomUserModel.results;
         } else {
